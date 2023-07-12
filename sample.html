@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.3.3/dist/index.umd.js"></script>
+    <scrip
+      src="https://kit.fontawesome.com/9cb75471e8.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body{
+        width: 100%;
+        
+      }
+      #qw{
+        width: 100%;
+        height: 3000px;
+
+      }
+      #pcqw{
+       
+        position: absolute;
+        right: 0px;
+        top: 300px;
+        overflow: hidden;
+        
+        
+        
+      }
+   #pcqw ul{
+      position: relative;
+      right: -150px;
+      
+    }
+    #pcqw ul li{
+      transition: all 0.3s ease-in-out;
+      color: #fff;
+      font-size: 2rem;
+     
+    }
+    #pcqw ul li i{
+      margin-top: 10px;
+      margin-left: 13px; 
+    }
+    #pcqw ul li p{
+    display: inline;
+    font-size: 1.5rem;
+   margin-left: 30px;
+   margin-bottom: 8px;
+  }
+  #pcqw ul li:nth-child(1){
+        height: 50px;
+        width: 200px;
+        list-style: none;
+        background-image: linear-gradient(to right, #ccc 25%,#444 25%);
+        cursor: pointer;
+        }
+        #pcqw ul li:nth-child(2){
+        height: 50px;
+        width: 200px;
+        list-style: none;
+        background-image: linear-gradient(to right, red 25%,blue 25%);
+        cursor: pointer;
+        }
+        #pcqw ul li:nth-child(3){
+        height: 50px;
+        width: 200px;
+        list-style: none;
+        background-image: linear-gradient(to right, yellow 25%,green 25%);
+        cursor: pointer;
+        }
+        #pcqw ul li:nth-child(4){
+        height: 50px;
+        width: 200px;
+        list-style: none;
+        background-image: linear-gradient(to right, tomato 25%,gray 25%);
+        cursor: pointer;
+        }
+        #pcqw ul li:hover{
+        transform: translateX(-150px);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="qw"></div>
+     <div id="pcqw">
+     <ul>
+      <li><p>스마트예약</p></li>
+      <li></li>
+      <li></li>
+      <li></li>
+     </ul>
+     </div>
+    <script>
+    
+  const defaultTop = parseInt($("#pcqw").css("top"));
+  $(window).on("scroll", function () {
+    const scv = $(window).scrollTop();
+    $("#pc")
+      .stop()
+      .animate({ top: scv + defaultTop + "px" }, 1000);
+  });
+  
+
+    </script>
+  </body>
+</html>
